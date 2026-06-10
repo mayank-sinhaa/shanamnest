@@ -1,0 +1,129 @@
+.register-page {
+  min-height: calc(100vh - 76px);
+  padding: 70px 8%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Arial, sans-serif;
+  background:
+    radial-gradient(circle at top left, #fbeaf0 0, transparent 35%),
+    linear-gradient(135deg, #fff7fa 0%, #ffffff 55%, #fbeaf0 100%);
+}
+
+.register-card {
+  width: 100%;
+  max-width: 760px;
+  padding: 38px;
+  border-radius: 32px;
+  background: #ffffff;
+  border: 1px solid #f0ccd9;
+  box-shadow: 0 24px 70px rgba(153, 53, 86, 0.16);
+}
+
+.register-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.register-header p {
+  display: inline-block;
+  margin: 0 0 14px;
+  padding: 9px 18px;
+  border-radius: 999px;
+  background: #fbeaf0;
+  color: #993556;
+  font-weight: 800;
+}
+
+.register-header h1 {
+  margin: 0 0 12px;
+  color: #28141c;
+  font-size: 42px;
+}
+
+.register-header span {
+  color: #65535a;
+  line-height: 1.7;
+}
+
+.register-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.register-form label {
+  margin: 0 0 8px;
+  color: #4d2c38;
+  font-weight: 800;
+  font-size: 14px;
+}
+
+.register-form input,
+.register-form select {
+  width: 100%;
+  height: 52px;
+  margin-bottom: 18px;
+  padding: 0 16px;
+  border-radius: 14px;
+  border: 1px solid #e7bfd0;
+  outline: none;
+  font-size: 15px;
+  color: #28141c;
+  background: #fff9fb;
+}
+
+.register-form input:focus,
+.register-form select:focus {
+  border-color: #d4537e;
+  box-shadow: 0 0 0 4px rgba(212, 83, 126, 0.12);
+}
+
+.register-form button {
+  height: 54px;
+  margin-top: 6px;
+  border: none;
+  border-radius: 999px;
+  background: #d4537e;
+  color: white;
+  font-size: 16px;
+  font-weight: 900;
+  cursor: pointer;
+  box-shadow: 0 14px 32px rgba(212, 83, 126, 0.3);
+}
+
+.register-form button:hover {
+  background: #993556;
+}
+
+.login-link {
+  margin: 24px 0 0;
+  text-align: center;
+  color: #65535a;
+}
+
+.login-link a {
+  color: #d4537e;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+@media (max-width: 650px) {
+  .form-grid {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .register-card {
+    padding: 26px;
+  }
+
+  .register-header h1 {
+    font-size: 34px;
+  }
+}
