@@ -5,7 +5,10 @@ export default function Navbar() {
   return (
     <nav className="navbar">
       <Link to="/" className="logo">
-        Shanam<span>Nest</span>
+        <img src="/logo.png" alt="ShanamNest Logo" className="logo-img" />
+        <span className="logo-text">
+          Shanam<span>Nest</span>
+        </span>
       </Link>
 
       <div className="nav-links">
