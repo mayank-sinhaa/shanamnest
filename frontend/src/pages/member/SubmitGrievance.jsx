@@ -1,6 +1,9 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
+const API_BASE_URL =
+  import.meta.env.VITE_API_BASE_URL || "http://127.0.0.1:8000/api";
+
 export default function SubmitGrievance() {
   const [formData, setFormData] = useState({
     category: "",
@@ -87,7 +90,9 @@ export default function SubmitGrievance() {
     return "";
   };
 
-  const handleSubmit = async () => {
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
     setError("");
     setSubmitted(false);
     setCreatedTicket(null);
@@ -119,16 +124,13 @@ export default function SubmitGrievance() {
         bodyData.append("attachment", formData.attachment);
       }
 
-      const response = await fetch(
-        "http://127.0.0.1:8000/api/grievances/submit/",
-        {
-          method: "POST",
-          headers: {
-            Authorization: `Bearer ${token}`,
-          },
-          body: bodyData,
-        }
-      );
+      const response = await fetch(`${API_BASE_URL}/grievances/submit/`, {
+        method: "POST",
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+        body: bodyData,
+      });
 
       const data = await response.json().catch(() => null);
 
@@ -158,7 +160,11 @@ export default function SubmitGrievance() {
         fileInput.value = "";
       }
     } catch (err) {
-      setError(err.message || "Unable to submit grievance.");
+      setError(
+        err.message === "Failed to fetch"
+          ? "Server connection failed. Please wait a few seconds and try again."
+          : err.message || "Unable to submit grievance."
+      );
     } finally {
       setLoading(false);
     }
@@ -207,7 +213,7 @@ export default function SubmitGrievance() {
         <div style={card}>
           <h2 style={cardTitle}>New Grievance Form</h2>
 
-          <form>
+          <form onSubmit={handleSubmit}>
             <div style={formGrid}>
               <div>
                 <label style={label}>Grievance Category *</label>
@@ -285,13 +291,12 @@ export default function SubmitGrievance() {
             )}
 
             <button
-              type="button"
+              type="submit"
               style={{
                 ...button,
                 opacity: loading ? 0.75 : 1,
                 cursor: loading ? "not-allowed" : "pointer",
               }}
-              onClick={handleSubmit}
               disabled={loading}
             >
               {loading ? "Submitting Grievance..." : "Submit Grievance"}
