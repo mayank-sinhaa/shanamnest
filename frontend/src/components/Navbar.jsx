@@ -18,6 +18,7 @@ export default function Navbar() {
         <Link to="/contact">Contact</Link>
         <Link to="/live-chat">Live Chat</Link>
         <Link to="/login">Member Login</Link>
+        <Link to="/admin-login">Admin Login</Link>
         <Link to="/register" className="nav-btn">
           Register
         </Link>

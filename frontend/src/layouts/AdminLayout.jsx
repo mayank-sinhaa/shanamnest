@@ -7,7 +7,7 @@ export default function AdminLayout() {
     localStorage.removeItem("accessToken");
     localStorage.removeItem("refreshToken");
 
-    navigate("/login");
+    navigate(" /");
   };
 
   const getNavLinkStyle = ({ isActive }) => ({
