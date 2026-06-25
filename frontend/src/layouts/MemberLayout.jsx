@@ -18,9 +18,9 @@ export default function MemberLayout() {
     <div style={wrapper}>
       <aside style={sidebar}>
         <Link to="/" style={logo}>
-          <img src="/logo.png" alt="ANAM FOUNDATION Logo" style={logoImg} />
+          <img src="/logo.png" alt="ShanamNest Logo" style={logoImg} />
           <span>
-            ANAM <span style={{ color: "#d4537e" }}>FOUNDATION</span>
+            Shanam<span style={{ color: "#d4537e" }}>Nest</span>
           </span>
         </Link>
 
@@ -69,7 +69,7 @@ export default function MemberLayout() {
           <div>
             <h3 style={{ margin: 0, color: "#28141c" }}>Member Portal</h3>
             <p style={{ margin: "4px 0 0", color: "#65535a" }}>
-              Welcome back to your ANAM FOUNDATION dashboard
+              Welcome back to your ShanamNest dashboard
             </p>
           </div>
 

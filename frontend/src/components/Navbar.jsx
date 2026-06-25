@@ -5,9 +5,9 @@ export default function Navbar() {
   return (
     <nav className="navbar">
       <Link to="/" className="logo">
-        <img src="/logo.png" alt="ANAM FOUNDATION Logo" className="logo-img" />
+        <img src="/logo.png" alt="ShanamNest Logo" className="logo-img" />
         <span className="logo-text">
-          ANAM <span>FOUNDATION</span>
+          Shanam<span>Nest</span>
         </span>
       </Link>
 

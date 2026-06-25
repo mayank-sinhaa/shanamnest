@@ -176,7 +176,7 @@ export default function SubmitGrievance() {
         <div>
           <p style={tag}>Submit Grievance</p>
 
-          <h1 style={heading}>Raise your concern with ANAM FOUNDATION support</h1>
+          <h1 style={heading}>Raise your concern with ShanamNest support</h1>
 
           <p style={subText}>
             Share your issue clearly. Our admin team will review it and reply

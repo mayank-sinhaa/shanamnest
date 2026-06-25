@@ -157,7 +157,7 @@ export default function LiveChat() {
             }}
           >
             Schedule a live chat with{" "}
-            <span style={{ color: "#d4537e" }}>ANAM FOUNDATION support</span>
+            <span style={{ color: "#d4537e" }}>ShanamNest support</span>
           </h1>
 
           <p

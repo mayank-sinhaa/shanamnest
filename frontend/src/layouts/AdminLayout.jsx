@@ -19,9 +19,9 @@ export default function AdminLayout() {
     <div style={wrapper}>
       <aside style={sidebar}>
         <Link to="/" style={logo}>
-          <img src="/logo.png" alt="ANAM FOUNDATION Logo" style={logoImg} />
+          <img src="/logo.png" alt="ShanamNest Logo" style={logoImg} />
           <span>
-            ANAM <span style={{ color: "#f7a6c1" }}>FOUNDATION</span>
+            Shanam<span style={{ color: "#f7a6c1" }}>Nest</span>
           </span>
         </Link>
 

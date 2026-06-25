@@ -157,7 +157,7 @@ export default function Profile() {
 
           <p style={subText}>
             Keep your personal details updated for better communication,
-            grievance tracking and ANAM FOUNDATION support.
+            grievance tracking and ShanamNest support.
           </p>
         </div>
 

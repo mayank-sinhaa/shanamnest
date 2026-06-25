@@ -17,7 +17,7 @@ export default function About() {
   ];
 
   const steps = [
-    "Register as a ANAM FOUNDATION member",
+    "Register as a ShanamNest member",
     "Access your personal dashboard",
     "Submit grievances or support requests",
     "Track replies and status updates",
@@ -53,7 +53,7 @@ export default function About() {
               marginBottom: "20px",
             }}
           >
-            About ANAM FOUNDATION
+            About ShanamNest
           </p>
 
           <h1
@@ -78,7 +78,7 @@ export default function About() {
               maxWidth: "720px",
             }}
           >
-            ANAM FOUNDATION is designed to support families through member services,
+            ShanamNest is designed to support families through member services,
             grievance tracking, profile management and structured communication
             with the support team.
           </p>
@@ -141,7 +141,7 @@ export default function About() {
           >
             <div>
               <h2 style={{ margin: "0 0 12px", fontSize: "42px" }}>
-                ANAM FOUNDATION
+                ShanamNest
               </h2>
               <p style={{ margin: 0, lineHeight: "1.7", color: "#ffe6ef" }}>
                 Newborn care support, grievance management and member services
@@ -259,7 +259,7 @@ export default function About() {
           }}
         >
           <h2 style={{ margin: "0 0 22px", color: "#28141c" }}>
-            How ANAM FOUNDATION Works
+            How ShanamNest Works
           </h2>
 
           {steps.map((step, index) => (

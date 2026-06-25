@@ -185,7 +185,7 @@ EMAIL_BACKEND = os.environ.get(
 
 DEFAULT_FROM_EMAIL = os.environ.get(
     "DEFAULT_FROM_EMAIL",
-    "ANAM FOUNDATION <no-reply@shanamnest.org>",
+    "ShanamNest <no-reply@shanamnest.org>",
 )
 
 

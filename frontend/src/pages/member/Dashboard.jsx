@@ -246,7 +246,7 @@ export default function Dashboard() {
               <strong style={{ color: "#993556" }}>Support Status</strong>
 
               <p style={{ color: "#65535a", lineHeight: "1.8", marginBottom: 0 }}>
-                Your grievances are reviewed by the ANAM FOUNDATION support team.
+                Your grievances are reviewed by the ShanamNest support team.
                 Status and replies will appear in your dashboard.
               </p>
             </div>

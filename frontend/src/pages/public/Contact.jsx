@@ -152,7 +152,7 @@ export default function Contact() {
             }}
           >
             Have a question about membership, services, grievance tracking or
-            newborn care support? Contact the ANAM FOUNDATION team and we will guide
+            newborn care support? Contact the ShanamNest team and we will guide
             you.
           </p>
 

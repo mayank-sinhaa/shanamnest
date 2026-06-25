@@ -143,7 +143,7 @@ export default function Dashboard() {
         <h1 style={heading}>Control grievances, members and support replies</h1>
 
         <p style={subText}>
-          This dashboard helps the ANAM FOUNDATION team monitor member issues,
+          This dashboard helps the ShanamNest team monitor member issues,
           public messages, live chat requests and support activity.
         </p>
       </div>

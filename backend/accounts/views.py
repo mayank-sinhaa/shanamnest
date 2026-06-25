@@ -76,9 +76,9 @@ class RequestRegistrationOTPView(generics.GenericAPIView):
             )
 
             send_mail(
-                subject="Your ANAM FOUNDATION Email Verification OTP",
+                subject="Your ShanamNest Email Verification OTP",
                 message=(
-                    f"Your ANAM FOUNDATION email verification OTP is {email_otp}. "
+                    f"Your ShanamNest email verification OTP is {email_otp}. "
                     f"This OTP is valid for 10 minutes."
                 ),
                 from_email=None,
@@ -145,9 +145,9 @@ class RequestPasswordResetOTPView(generics.GenericAPIView):
             )
 
             send_mail(
-                subject="Your ANAM FOUNDATION Password Reset OTP",
+                subject="Your ShanamNest Password Reset OTP",
                 message=(
-                    f"Your ANAM FOUNDATION password reset OTP is {otp}. "
+                    f"Your ShanamNest password reset OTP is {otp}. "
                     f"This OTP is valid for 10 minutes."
                 ),
                 from_email=None,
