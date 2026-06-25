@@ -3,7 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { authAPI } from "../../api/api";
 import "./Login.css";
 
-export default function Login() {
+export default function AdminLogin() {
   const navigate = useNavigate();
 
   const [formData, setFormData] = useState({
@@ -27,7 +27,7 @@ export default function Login() {
     setError("");
 
     if (!formData.username.trim() || !formData.password.trim()) {
-      setError("Please enter email and password.");
+      setError("Please enter admin username/email and password.");
       return;
     }
 
@@ -44,20 +44,20 @@ export default function Login() {
 
       const currentUser = await authAPI.currentUser();
 
-      if (currentUser.is_staff || currentUser.is_superuser) {
+      if (!currentUser.is_staff && !currentUser.is_superuser) {
         localStorage.removeItem("accessToken");
         localStorage.removeItem("refreshToken");
 
-        setError("Admin account cannot login from Member Login. Please use Admin Login.");
+        setError("Member account cannot login from Admin Login.");
         return;
       }
 
-      navigate("/member/dashboard");
+      navigate("/admin/dashboard");
     } catch (err) {
       localStorage.removeItem("accessToken");
       localStorage.removeItem("refreshToken");
 
-      setError("Invalid email or password. Please try again.");
+      setError("Invalid admin credentials. Please try again.");
     } finally {
       setLoading(false);
     }
@@ -66,31 +66,31 @@ export default function Login() {
   return (
     <main className="login-page">
       <section className="login-left">
-        <p className="login-tag">Secure Member Access</p>
+        <p className="login-tag">Admin Secure Access</p>
 
         <h1>
-          Welcome back to <span>ShanamNest</span>
+          Admin Control for <span>ShanamNest</span>
         </h1>
 
         <p className="login-text">
-          Login to access your member dashboard, update your profile, submit
-          grievances, and track support replies from the ShanamNest team.
+          Login here only if you are an authorized admin or staff member.
+          Members should use the Member Login page.
         </p>
 
         <div className="login-points">
           <div>
-            <strong>✓ Member Dashboard</strong>
-            <p>View your profile and service updates.</p>
+            <strong>✓ Manage Grievances</strong>
+            <p>Review, update, and reply to member grievances.</p>
           </div>
 
           <div>
-            <strong>✓ Grievance Tracking</strong>
-            <p>Track status from Pending to Resolved.</p>
+            <strong>✓ Manage Members</strong>
+            <p>View registered members and support records.</p>
           </div>
 
           <div>
-            <strong>✓ Secure Communication</strong>
-            <p>Receive official replies from support staff.</p>
+            <strong>✓ Admin Reports</strong>
+            <p>Track contact messages, live chats, and grievance status.</p>
           </div>
         </div>
       </section>
@@ -98,8 +98,8 @@ export default function Login() {
       <section className="login-right">
         <div className="login-card">
           <div className="login-card-header">
-            <h2>Member Login</h2>
-            <p>Only registered members can continue here</p>
+            <h2>Admin Login</h2>
+            <p>Only authorized admin accounts can continue</p>
           </div>
 
           {error && (
@@ -120,13 +120,13 @@ export default function Login() {
           )}
 
           <form className="login-form">
-            <label>Email Address</label>
+            <label>Admin Username / Email</label>
             <input
-              type="email"
+              type="text"
               name="username"
               value={formData.username}
               onChange={handleChange}
-              placeholder="Enter email address"
+              placeholder="Enter admin username or email"
             />
 
             <label>Password</label>
@@ -138,26 +138,17 @@ export default function Login() {
               placeholder="Enter password"
             />
 
-            <div className="form-row">
-              <label className="remember">
-                <input type="checkbox" />
-                Remember me
-              </label>
-
-              <Link to="/forgot-password">Forgot Password?</Link>
-            </div>
-
             <button type="button" onClick={handleLogin} disabled={loading}>
-              {loading ? "Logging in..." : "Member Login"}
+              {loading ? "Logging in..." : "Admin Login"}
             </button>
           </form>
 
           <p className="register-link">
-            New member? <Link to="/register">Create an account</Link>
+            Member? <Link to="/login">Go to Member Login</Link>
           </p>
 
           <p className="register-link">
-            Admin? <Link to="/admin-login">Login as Admin</Link>
+            Back to <Link to="/">Home</Link>
           </p>
         </div>
       </section>

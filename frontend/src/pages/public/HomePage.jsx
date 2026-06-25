@@ -45,6 +45,10 @@ export default function HomePage() {
             <a href="/login" className="btn btn-secondary">
               Member Login
             </a>
+
+            <a href="/admin-login" className="btn btn-secondary">
+              Admin Login
+            </a>
           </div>
 
           <div className="hero-stats">
@@ -126,8 +130,8 @@ export default function HomePage() {
               Open Member Portal
             </a>
 
-            <a href="/login" className="btn btn-outline">
-              Raise Grievance
+            <a href="/admin-login" className="btn btn-outline">
+              Admin Login
             </a>
           </div>
         </div>
@@ -166,9 +170,19 @@ export default function HomePage() {
           and assistance.
         </p>
 
-        <a href="/register" className="btn btn-light">
-          Register Now
-        </a>
+        <div className="hero-actions" style={{ justifyContent: "center" }}>
+          <a href="/register" className="btn btn-light">
+            Register Now
+          </a>
+
+          <a href="/login" className="btn btn-secondary">
+            Member Login
+          </a>
+
+          <a href="/admin-login" className="btn btn-secondary">
+            Admin Login
+          </a>
+        </div>
       </section>
     </main>
   );

@@ -3,6 +3,7 @@ import { Routes, Route, Link, useNavigate } from "react-router-dom";
 import PublicLayout from "../layouts/PublicLayout";
 import HomePage from "../pages/public/HomePage";
 import Login from "../pages/public/Login";
+import AdminLogin from "../pages/public/AdminLogin";
 import ForgotPassword from "../pages/public/ForgotPassword";
 import About from "../pages/public/About";
 import Contact from "../pages/public/Contact";
@@ -648,6 +649,7 @@ export default function PublicRoutes() {
       <Route element={<PublicLayout />}>
         <Route index element={<HomePage />} />
         <Route path="login" element={<Login />} />
+        <Route path="admin-login" element={<AdminLogin />} />
         <Route path="register" element={<Register />} />
         <Route path="services" element={<Services />} />
         <Route path="about" element={<About />} />
