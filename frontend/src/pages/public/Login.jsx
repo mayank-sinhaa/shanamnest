@@ -53,7 +53,7 @@ export default function Login() {
       }
 
       navigate("/member/dashboard");
-    } catch (err) {
+    } catch  {
       localStorage.removeItem("accessToken");
       localStorage.removeItem("refreshToken");
 

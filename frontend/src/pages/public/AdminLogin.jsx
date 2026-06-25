@@ -53,7 +53,7 @@ export default function AdminLogin() {
       }
 
       navigate("/admin/dashboard");
-    } catch (err) {
+    } catch  {
       localStorage.removeItem("accessToken");
       localStorage.removeItem("refreshToken");
 
