@@ -1,4 +1,4 @@
-import { Link, Outlet, useNavigate } from "react-router-dom";
+import { NavLink, Link, Outlet, useNavigate } from "react-router-dom";
 
 export default function MemberLayout() {
   const navigate = useNavigate();
@@ -6,36 +6,60 @@ export default function MemberLayout() {
   const handleLogout = () => {
     localStorage.removeItem("accessToken");
     localStorage.removeItem("refreshToken");
-
     navigate("/login");
   };
+
+  const getNavLinkStyle = ({ isActive }) => ({
+    ...navLink,
+    ...(isActive ? activeNavLink : {}),
+  });
 
   return (
     <div style={wrapper}>
       <aside style={sidebar}>
         <Link to="/" style={logo}>
-          Shanam<span style={{ color: "#d4537e" }}>Nest</span>
+          <img src="/logo.png" alt="ShanamNest Logo" style={logoImg} />
+          <span>
+            Shanam<span style={{ color: "#d4537e" }}>Nest</span>
+          </span>
         </Link>
 
+        <div style={portalBox}>
+          <p style={portalSmall}>Member Portal</p>
+          <h3 style={portalTitle}>Family Support</h3>
+        </div>
+
         <nav style={nav}>
-          <Link style={navLink} to="/member/dashboard">
-            Dashboard
-          </Link>
+          <p style={navSection}>Main</p>
 
-          <Link style={navLink} to="/member/submit-grievance">
-            Submit Grievance
-          </Link>
+          <NavLink style={getNavLinkStyle} to="/member/dashboard">
+            🏠 Dashboard
+          </NavLink>
 
-          <Link style={navLink} to="/member/my-grievances">
-            My Grievances
-          </Link>
+          <NavLink style={getNavLinkStyle} to="/member/submit-grievance">
+            📝 Submit Grievance
+          </NavLink>
 
-          <Link style={navLink} to="/member/profile">
-            My Profile
-          </Link>
+          <NavLink style={getNavLinkStyle} to="/member/my-grievances">
+            📋 My Grievances
+          </NavLink>
+
+          <NavLink style={getNavLinkStyle} to="/member/profile">
+            👤 My Profile
+          </NavLink>
+
+          <p style={navSection}>Support</p>
+
+          <NavLink style={getNavLinkStyle} to="/contact">
+            📞 Contact Support
+          </NavLink>
+
+          <NavLink style={getNavLinkStyle} to="/live-chat">
+            💬 Live Chat
+          </NavLink>
 
           <button type="button" onClick={handleLogout} style={logoutButton}>
-            Logout
+            🚪 Logout
           </button>
         </nav>
       </aside>
@@ -61,51 +85,105 @@ export default function MemberLayout() {
 const wrapper = {
   minHeight: "100vh",
   display: "grid",
-  gridTemplateColumns: "280px 1fr",
+  gridTemplateColumns: "290px 1fr",
   fontFamily: "Arial",
   background: "#fff7fa",
 };
 
 const sidebar = {
-  padding: "28px",
+  padding: "26px",
   background: "#ffffff",
   borderRight: "1px solid #f0ccd9",
   boxShadow: "8px 0 35px rgba(153, 53, 86, 0.08)",
 };
 
 const logo = {
-  display: "block",
-  marginBottom: "36px",
-  fontSize: "28px",
+  display: "flex",
+  alignItems: "center",
+  gap: "12px",
+  marginBottom: "26px",
+  fontSize: "26px",
   fontWeight: "900",
   color: "#993556",
   textDecoration: "none",
 };
 
+const logoImg = {
+  width: "52px",
+  height: "52px",
+  objectFit: "contain",
+  borderRadius: "50%",
+  background: "#fbeaf0",
+  padding: "4px",
+  border: "1px solid #f0ccd9",
+};
+
+const portalBox = {
+  padding: "18px",
+  borderRadius: "22px",
+  background: "linear-gradient(135deg, #993556, #d4537e)",
+  color: "#ffffff",
+  marginBottom: "26px",
+  boxShadow: "0 16px 36px rgba(212, 83, 126, 0.24)",
+};
+
+const portalSmall = {
+  margin: "0 0 8px",
+  color: "#ffe6ef",
+  fontWeight: "800",
+  fontSize: "13px",
+};
+
+const portalTitle = {
+  margin: 0,
+  fontSize: "21px",
+  lineHeight: "1.25",
+};
+
 const nav = {
   display: "grid",
-  gap: "14px",
+  gap: "12px",
+};
+
+const navSection = {
+  margin: "12px 0 2px",
+  color: "#993556",
+  fontSize: "12px",
+  fontWeight: "900",
+  textTransform: "uppercase",
+  letterSpacing: "1px",
 };
 
 const navLink = {
-  padding: "14px 18px",
+  padding: "14px 16px",
   borderRadius: "16px",
   background: "#fff7fa",
   color: "#4d2c38",
   textDecoration: "none",
   fontWeight: "800",
   border: "1px solid #f0ccd9",
+  transition: "0.2s ease",
+};
+
+const activeNavLink = {
+  background: "#d4537e",
+  color: "#ffffff",
+  border: "1px solid #d4537e",
+  boxShadow: "0 12px 26px rgba(212, 83, 126, 0.26)",
 };
 
 const logoutButton = {
-  ...navLink,
-  marginTop: "20px",
-  background: "#d4537e",
+  padding: "14px 16px",
+  borderRadius: "16px",
+  background: "#28141c",
   color: "#ffffff",
   cursor: "pointer",
   textAlign: "left",
   fontSize: "16px",
   fontFamily: "Arial",
+  fontWeight: "900",
+  border: "none",
+  marginTop: "18px",
 };
 
 const mainArea = {
