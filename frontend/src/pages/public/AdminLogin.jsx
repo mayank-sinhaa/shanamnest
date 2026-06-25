@@ -69,7 +69,7 @@ export default function AdminLogin() {
         <p className="login-tag">Admin Secure Access</p>
 
         <h1>
-          Admin Control for <span>ShanamNest</span>
+          Admin Control for <span>ANAM FOUNDATION</span>
         </h1>
 
         <p className="login-text">

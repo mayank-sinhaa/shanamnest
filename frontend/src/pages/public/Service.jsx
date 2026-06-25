@@ -42,7 +42,7 @@ export default function Services() {
             fontSize: "18px",
           }}
         >
-          ShanamNest provides digital support, member access, and structured
+          ANAM FOUNDATION provides digital support, member access, and structured
           grievance assistance for families.
         </p>
       </section>

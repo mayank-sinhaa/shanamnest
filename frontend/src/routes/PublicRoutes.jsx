@@ -171,7 +171,7 @@ function Register() {
             marginBottom: "20px",
           }}
         >
-          Join ShanamNest
+          Join ANAM FOUNDATION
         </p>
 
         <h1
@@ -197,7 +197,7 @@ function Register() {
           }}
         >
           Register to access your dashboard, raise grievances, track support
-          status, and stay connected with ShanamNest services.
+          status, and stay connected with ANAM FOUNDATION services.
         </p>
 
         <div
@@ -538,7 +538,7 @@ function Services() {
             fontSize: "18px",
           }}
         >
-          ShanamNest combines newborn care support, member access, grievance
+          ANAM FOUNDATION combines newborn care support, member access, grievance
           tracking, and family communication into one warm digital experience.
         </p>
       </section>

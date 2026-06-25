@@ -103,7 +103,7 @@ export default function GrievanceDetail() {
 
           <p style={subText}>
             View your grievance details, current status, admin note, attachment
-            and official replies from the ShanamNest support team.
+            and official replies from the ANAM FOUNDATION support team.
           </p>
         </div>
 
@@ -256,7 +256,7 @@ export default function GrievanceDetail() {
 
             <p style={{ color: "#65535a", lineHeight: "1.7", marginBottom: 0 }}>
               Please wait for admin response. Your grievance is being reviewed
-              by the ShanamNest support team.
+              by the ANAM FOUNDATION support team.
             </p>
           </div>
 

@@ -69,12 +69,12 @@ export default function Login() {
         <p className="login-tag">Secure Member Access</p>
 
         <h1>
-          Welcome back to <span>ShanamNest</span>
+          Welcome back to <span>ANAM FOUNDATION</span>
         </h1>
 
         <p className="login-text">
           Login to access your member dashboard, update your profile, submit
-          grievances, and track support replies from the ShanamNest team.
+          grievances, and track support replies from the ANAM FOUNDATION team.
         </p>
 
         <div className="login-points">

@@ -60,7 +60,7 @@ export default function NotFound() {
           }}
         >
           The page you are looking for does not exist or may have been moved.
-          Please return to ShanamNest home page.
+          Please return to ANAM FOUNDATION home page.
         </p>
 
         <div

@@ -36,7 +36,7 @@ export default function ChatWidget() {
       },
       {
         from: "Support Team",
-        text: "Thank you for contacting ShanamNest. Your message has been received. Our team will respond soon.",
+        text: "Thank you for contacting ANAM FOUNDATION. Your message has been received. Our team will respond soon.",
       },
     ]);
 
@@ -53,7 +53,7 @@ export default function ChatWidget() {
         <div className="chat-box">
           <div className="chat-header">
             <div>
-              <h3>ShanamNest Support</h3>
+              <h3>ANAM FOUNDATION Support</h3>
               <p>Offline helpdesk available</p>
             </div>
 

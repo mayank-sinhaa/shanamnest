@@ -26,7 +26,7 @@ export default function HomePage() {
     <main className="home-page">
       <section className="hero-section">
         <div className="hero-content">
-          <p className="eyebrow">ShanamNest Newborn Care Platform</p>
+          <p className="eyebrow">ANAM FOUNDATION Newborn Care Platform</p>
 
           <h1>
             Caring Hands for <span>Newborns</span> and Families
@@ -120,7 +120,7 @@ export default function HomePage() {
           <h2>Everything your members need, in one secure place</h2>
 
           <p>
-            ShanamNest brings public information, member access, grievance
+            ANAM FOUNDATION brings public information, member access, grievance
             submission, support replies, and admin management into one clean
             platform.
           </p>
@@ -166,7 +166,7 @@ export default function HomePage() {
         <h2>Ready to create a caring digital experience?</h2>
 
         <p>
-          Join ShanamNest as a member and stay connected with support, services,
+          Join ANAM FOUNDATION as a member and stay connected with support, services,
           and assistance.
         </p>
 

@@ -126,7 +126,7 @@ export default function ForgotPassword() {
         <p className="login-tag">Account Recovery</p>
 
         <h1>
-          Reset your <span>ShanamNest</span> password
+          Reset your <span>ANAM FOUNDATION</span> password
         </h1>
 
         <p className="login-text">

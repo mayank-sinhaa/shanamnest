@@ -30,7 +30,7 @@ export default function Reports() {
     {
       title: "Total Registered Members",
       value: statsData?.users?.total_members || 0,
-      text: "Families connected with ShanamNest",
+      text: "Families connected with ANAM FOUNDATION",
     },
     {
       title: "Total Grievances",

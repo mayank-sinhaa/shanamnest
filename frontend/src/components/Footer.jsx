@@ -7,7 +7,7 @@ export default function Footer() {
       <div className="footer-grid">
         <div className="footer-brand">
           <Link to="/" className="footer-logo">
-            Shanam<span>Nest</span>
+            ANAM <span>FOUNDATION</span>
           </Link>
 
           <p>
@@ -50,7 +50,7 @@ export default function Footer() {
       </div>
 
       <div className="footer-bottom">
-        <p>© 2026 ShanamNest. All rights reserved.</p>
+        <p>© 2026 ANAM FOUNDATION. All rights reserved.</p>
         <p>Designed for newborn family support and grievance management.</p>
       </div>
     </footer>

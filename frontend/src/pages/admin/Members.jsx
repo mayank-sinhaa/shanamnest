@@ -96,7 +96,7 @@ export default function Members() {
       <div style={hero}>
         <p style={tag}>Manage Members</p>
 
-        <h1 style={heading}>View registered ShanamNest members</h1>
+        <h1 style={heading}>View registered ANAM FOUNDATION members</h1>
 
         <p style={subText}>
           Admin can search members, filter by service type, monitor account
